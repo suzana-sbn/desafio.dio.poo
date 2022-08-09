@@ -1,5 +1,4 @@
-import br.com.dio.dominio.Curso;
-import br.com.dio.dominio.Mentoria;
+import br.com.dio.dominio.*;
 
 import java.time.LocalDate;
 
@@ -15,13 +14,56 @@ public static void main(String[] args){
     curso2.setDescricao("descricao curso js");
     curso2.setCargahorario(5);
 
+
     Mentoria mentoria = new Mentoria();
     mentoria.setTitulo("mentoria do java");
     mentoria.setDescricao("descricao mentoria java");
     mentoria.setData(LocalDate.now());
 
-    System.out.println(curso1);
-    System.out.println(curso2);
-    System.out.println(mentoria);
+    Bootcamp bootcamp = new Bootcamp();
+    bootcamp.setNome("Bootcamp Java Developer");
+    bootcamp.setDescricao("Descricao Bootcamp Java Developer");
+    bootcamp.getConteudos().add(curso1);
+    bootcamp.getConteudos().add(curso2);
+    bootcamp.getConteudos().add(mentoria);
+
+    Dev devSuzana = new Dev();
+    devSuzana.setNome("Suzana");
+    System.out.println("Conteudos Inscritos Suzana:" + devSuzana.getConteudosInscritos());
+    devSuzana.progredir();
+    devSuzana.progredir();
+    devSuzana.progredir();
+    System.out.println("-");
+    System.out.println("Conteudos Inscritos Suzana:" + devSuzana.getConteudosInscritos());
+    System.out.println("Conteudos Concluidos Suzana:" + devSuzana.getConteudosConcluidos());
+    System.out.println("xp:" + devSuzana.calcularTotalXp());
+
+    System.out.println("-------");
+
+    Dev devCaio = new Dev();
+    devCaio.setNome("Caio");
+    System.out.println("Conteudos Inscritos Caio:" + devCaio.getConteudosInscritos());
+    devCaio.progredir();
+    devCaio.progredir();
+    System.out.println("-");
+    System.out.println("Conteudos Inscritos Caio:" + devCaio.getConteudosInscritos());
+    System.out.println("Conteudos Concluidos Caio:" + devCaio.getConteudosConcluidos());
+    System.out.println("xp:" + devCaio.calcularTotalXp());
+
+    Dev devCaic = new Dev();
+    devCaic.setNome("Caic");
+    System.out.println("Conteudos Inscritos Caic:"+ devCaic.getConteudosInscritos());
+    devCaic.progredir();
+    System.out.println("-");
+    System.out.println("Conteudos Inscritos Caic:"+ devCaic.getConteudosInscritos());
+    System.out.println("Conteudos Concluidos Caic:"+ devCaic.getConteudosConcluidos());
+    System.out.println("xp:" + devCaic.calcularTotalXp());
+
+
+
+    //System.out.println(curso1);
+    //System.out.println(curso2);
+    //System.out.println(mentoria);
+
 }
 }
