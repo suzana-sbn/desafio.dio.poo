@@ -29,6 +29,7 @@ public static void main(String[] args){
 
     Dev devSuzana = new Dev();
     devSuzana.setNome("Suzana");
+    devSuzana.increverBootcamp(bootcamp);
     System.out.println("Conteudos Inscritos Suzana:" + devSuzana.getConteudosInscritos());
     devSuzana.progredir();
     devSuzana.progredir();
@@ -42,6 +43,7 @@ public static void main(String[] args){
 
     Dev devCaio = new Dev();
     devCaio.setNome("Caio");
+    devCaio.increverBootcamp(bootcamp);
     System.out.println("Conteudos Inscritos Caio:" + devCaio.getConteudosInscritos());
     devCaio.progredir();
     devCaio.progredir();
@@ -52,6 +54,7 @@ public static void main(String[] args){
 
     Dev devCaic = new Dev();
     devCaic.setNome("Caic");
+    devCaic.increverBootcamp(bootcamp);
     System.out.println("Conteudos Inscritos Caic:"+ devCaic.getConteudosInscritos());
     devCaic.progredir();
     System.out.println("-");
